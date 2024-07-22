@@ -1,0 +1,52 @@
+<div class="container mt-2">
+  <div class="header">
+    <nav>
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a href="#" class="nav-link active" aria-current="page">Price/Rate Upload</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Upload Summary</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="card p-4 shadow mt-4 smaller-card">
+    <h6 class="card-title">Upload File</h6>
+
+    <div class="upload-area border p-4 mb-4 shadow">
+      <i class="fas fa-cloud-upload-alt cloud-icon p-3"></i>
+
+      <div class="upload-box p-2 d-flex align-items-center justify-content-center">
+        <p id="drag-drop-instruction" class="mb-0 mr-3">Drag and Drop your Files Here, or</p>
+        <input type="file" (change)="onFileSelected($event)" multiple style="display: none;" #fileInput>
+        <button class="btn btn-primary whiteBtn ml-3" (click)="fileInput.click()">Select</button>
+      </div>
+    </div>
+
+    <div class="form-group mb-4 row">
+      <div class="col-md-6 mb-3 mb-md-0">
+        <label for="submitted-by">Submitted by</label>
+        <input type="text" id="submitted-by" class="form-control" placeholder="Input Text" aria-label="Submitted by">
+      </div>
+
+      <div class="col-md-6">
+        <label for="upload-date">Upload date</label>
+        <input type="date" id="upload-date" class="form-control" value="2024-06-11" aria-label="Upload date">
+      </div>
+    </div>
+
+    <div class="uploaded-files" *ngIf="uploadedFiles.length > 0">
+      <h3>Uploaded Files</h3>
+      <ul class="list-group">
+        <li *ngFor="let file of uploadedFiles" class="list-group-item">{{ file.name }}</li>
+      </ul>
+    </div>
+
+    <div class="button-group mt-4 d-flex justify-content-between">
+      <button class="btn btn-primary whiteBtn" aria-label="Cancel Upload">Cancel</button>
+      <button class="btn btn-primary" aria-label="Upload Files">Upload</button>
+    </div>
+  </div>
+</div>

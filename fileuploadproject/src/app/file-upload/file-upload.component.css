@@ -1,0 +1,177 @@
+.header nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.header nav ul li a {
+  text-decoration: none;
+  color: #90a7c3;
+  padding: 10px;
+  border-bottom: 2px solid transparent;
+}
+
+.header nav ul li a.active {
+  border-bottom: 2px solid blue;
+  background-color: #f6f8fa;
+}
+
+.card {
+  border-radius: 10px;
+}
+
+.smaller-card {
+  max-width: 700px; /*Adjust the width as needed */
+/* margin: 0 auto;     Center the card */
+}
+
+.upload-area {
+  border: 2px dashed #ccc;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+  transition: background-color 0.3s;
+  border-radius: 10px;
+}
+
+.upload-area.dragging {
+  background-color: #e9f7ff;
+}
+
+.upload-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.upload-box p {
+  margin-bottom: 0;
+}
+
+.upload-box .btn {
+  margin-left: 10px;
+}
+
+.cloud-icon {
+  font-size: 30px;
+  color: #475f7b;
+}
+
+.select-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.select-button:focus,
+.cancel-button:focus,
+.upload-button:focus {
+  outline: 2px solid #0056b3;
+  outline-offset: 2px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.form-group input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cancel-button {
+  background-color: #f8f9fa;
+  border: 1px solid #ced4da;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.upload-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.uploaded-files {
+  margin-top: 20px;
+}
+
+.uploaded-files ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.uploaded-files li {
+  background-color: #f8f9fa;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.btn {
+  border-radius: 20px;
+  width: 120px;
+}
+
+.whiteBtn {
+  background-color: white;
+  color: blue;
+}
+
+input {
+  background-color: #f6f8fa;
+}
+
+@media (max-width: 768px) {
+  .header nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .form-group.row {
+    flex-direction: column;
+  }
+
+  .button-group {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .button-group .btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .upload-box {
+    width: 100%;
+  }
+
+  .form-group label {
+    justify-content: center;
+    text-align: center;
+  }
+}
